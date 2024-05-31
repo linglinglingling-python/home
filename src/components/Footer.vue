@@ -19,6 +19,9 @@
           </a>
         </span>
         <!-- 站点备案 -->
+        <div class="inline-block w-16px flex-shrink-0 mr-1" data-v-644aa589="">
+          <img src="/public/images/logo01.png" class="w-full" style="width: 16px;">
+        </div>
         <a href="https://beian.mps.gov.cn/#/query/webSearch?code=41090002410938" rel="noreferrer" target="_blank">
           {{siteWA}}
         </a>
