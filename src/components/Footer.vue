@@ -19,10 +19,14 @@
           </a>
         </span>
         <!-- 站点备案 -->
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=41090002410938" rel="noreferrer" target="_blank">
+          {{siteWA}}
+        </a>
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
           &amp;
           {{ siteIcp }}
         </a>
+        
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -48,6 +52,7 @@ const fullYear = new Date().getFullYear();
 // 加载配置数据
 const siteStartDate = ref(import.meta.env.VITE_SITE_START);
 const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+const siteWA = ref(import.meta.env.VITE_SITE_WA);
 const siteAnthor = ref(import.meta.env.VITE_SITE_ANTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
