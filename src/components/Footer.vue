@@ -11,25 +11,25 @@
           {{ fullYear }}
           <a :href="siteUrl">{{ siteAnthor }}</a>
         </span>
-        <!-- 以下信息请不要修改哦 -->
-        <span class="hidden">
-          &amp;&nbsp;Made&nbsp;by
-          <a :href="config.github" target="_blank">
-            {{ config.author }}
+        <!-- 站点备案 -->
+        <span>
+          <a>
+            &nbsp;&nbsp;&nbsp;
+            <img src="/images/logo01.png" style="width: 16px;">
+          </a>
+        <span>
+        </span>
+          &nbsp;
+          <a v-if="siteWA" href="https://beian.mps.gov.cn/#/query/webSearch?code=41090002410938" rel="noreferrer" target="_blank">
+            {{ siteWA }}
           </a>
         </span>
-        <!-- 站点备案 -->
-        <div class="inline-block w-16px flex-shrink-0 mr-1" data-v-644aa589="">
-          <img src="/public/images/logo01.png" class="w-full" style="width: 16px;">
-        </div>
-        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=41090002410938" rel="noreferrer" target="_blank">
-          {{siteWA}}
-        </a>
-        <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
-          &amp;
-          {{ siteIcp }}
-        </a>
-        
+        <span>
+          <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
+            &nbsp;
+            {{ siteIcp }}
+          </a>
+        </span>   
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
